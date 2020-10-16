@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <title>covid tRACKER</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a id="navbar-brand" class="navbar-brand" href="/">covid tRACKER</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+           
+            <li class="nav-item active">
+              <a class="nav-link" href="/blogs"><i class="home icon"></i> Blogs <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                <i class="search icon"></i> Live Updates
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/bycountry">All Country</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item " href="/searchind">India</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/about"><i class="book icon"></i> About</a>
+            </li>
+            
+           
+           
+          </ul>
+
+          <ul id="auth1" class="nav navbar-nav navbar-right">
+            
+            <% if(user){ %>
+              <li id="auth2"><a id="auth3" href="#"><%= user.username %> </a></li>
+              <li><a href="/auth/logout">SIGN OUT</a></li>
+              
+          <% }else{ %>
+              <li><a href="/auth/login"><i class="sign in alternate icon"></i> SIGN IN</a></li>
+         <% } %> 
+            
+         
+         
+      
+        </ul>
+         
+        </div>      
+            
+    
+     
+
+      </nav>
+
+      <div class="mt-2 container">
+        <% if(error && error.length > 0){ %>
+         <div class="alert alert-danger" role="alert">
+           <%= error %>
+         </div>
+       <% } %> 
+     <% if(success && success.length > 0){ %>
+       <div class="alert alert-success" role="alert">
+         <%= success %>
+       </div>
+     <% } %> 
+      
+      </div>
+      
+
+
+
+     
+
+
+<div class="wrapper">
+  <body class="signINBackground">
+    <div class="mx-auto ">
+      <h1 class="display-4 text-center" id="signIN">Sign In Page</h1>
+    
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-6 col-10 mx-auto" id="signinBackground">
+          
+          <div class="instructions">
+            <p class="mt-5" id="ins1">Signing In with us is very simple.</p>
+            <p>Use your google account to continue.</p>
+            
+          </div>
+          
+          <div class="mt-2">
+            <a href="/auth/google">
+<img  src="data:image/png;base64,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" class="rounded mx-auto d-block googleLogo" alt="">
+            </a>
+            
+          </div>
+
+            <div class="signinButton mt-2">
+                <a href="/auth/google" class="ui google plus button mx-auto mb-3 mt-2" >
+                    <i class="google plus icon"></i>
+                   Google Plus
+                </a>
+               
+                
+            </div>
+            <div class="smallsignin mb-2">
+              <small><strong>You are just one tap away!</strong></small>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    
+  </body>
+    
+</div>
+
+
+<br>
+<br>
+<br>
+
+<footer>
+    
+  <div class="row" style="width: 100%;">
+      
+          
+              <div class="col-lg-4 col-md-4 cl-sm-4 col-12" style="padding: 20px;">
+                  <h1 class="logo-text display-3" style="padding: 7px;">covid tRACKER</h1>
+                  <p class="text-justify" style="margin-left: 20px; font-size: 16px;"><strong>covid tRACKER</strong>  is a digital diary, where you can share your experience how the pandemic affected your life.
+                      Also, you can check live updates about countries around the world, and if you are from India, you can get live 
+                      updates about all states.
+                  </p>
+                 <div class="container" >
+                  <p>We are also available on</p>
+                  <a href="#" style="color: white; font-size: 32px;"><i class="facebook square icon"></i></a>
+                  <a href="#" style="color: white; font-size: 32px;"><i class="instagram icon"></i></a>
+                  <a href="#" style="color: white; font-size: 32px;"><i class="twitter square icon"></i></a>
+                 </div> 
+              </div>
+
+              <div class="col-lg-4 col-md-4 cl-sm-4 col-12" id="footerSectionLinks" style="padding: 20px;">
+                  <h2 class="display-4" style="padding: 9px;">Quick Links</h2>
+                 <div class="container">
+                  <p><a href="/about" class="quickLinks"><li>Help Center</li></a></p>
+                  <p><a href="/about" class="quickLinks"><li>Terms & Conditions</li></a></p>
+                  <p><a href="/about" class="quickLinks"><li>Policies</li></a></p>
+                  <p><a href="/about" class="quickLinks"><li>Content Policy</li></a></p>
+                 </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 cl-sm-4 col-12" id="footerSectionLinks" style="padding: 20px; ">
+                  <h2 class="display-4" style="padding: 10px; ">Contact Us</h2>
+                  <div class="container" >
+                    <p><a href="mailto:covidtracker0019@gmail.com" class="quickLinks" style="color: white;"><i class="envelope outline icon"></i> covidtracker0019@gmail.com</a></p>
+                    <p><a href="https://github.com/hchaudhuri/covid-tRACKER.git" class="quickLinks" style="color: white;"><i class="github icon"></i> Github</a></p>
+                  </div>
+                  
+              </div>
+         
+      
+      
+  </div>
+
+<hr>
+<footer >
+  <p class="text-center"> <i class="copyright outline icon"></i> copyright: covid tRACKER | By &lt;/HC&gt;</p>
+
+</footer>
+  
+  
+
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+</body>
+</html>

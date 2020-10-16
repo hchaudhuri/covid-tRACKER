@@ -1,0 +1,218 @@
+<%- include('../partials/header') %> 
+
+<div class="wrapper">
+
+    <body class="casesBack">
+        
+        
+        <div class="container">
+            <h1 class="text-center text-uppercase display-3 "><strong>live updates for india</strong></h1>
+       </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-10 mx-auto" id="casesworld">
+                    <p class="text-center mt-3" style="font-size: 30px;"><strong>INDIA</strong></p>
+                    <table class="table table-sm table-active" >
+                        <thead>
+                        <tr>
+                             <th scope="col" class="globalFont">Sl No.</th>
+                             <th scope="col" class="globalFont">Attributes</th>
+                             <th scope="col" class="globalFont">Value</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                         <tr>
+                              <th scope="row" class="globalFont">1</th>
+                              <td class="globalFont">New Confirmed Cases:</td>
+                              <td class="globalFont"><%= ind3 %> </td>
+                         </tr>
+        
+                         <tr>
+                              <th scope="row" class="globalFont">2</th>
+                              <td class="globalFont">Total Confirmed Cases:</td>
+                              <td class="globalFont"><%= ind2 %> </td>
+                         </tr>
+        
+                        
+        
+                         <tr>
+                              <th scope="row" class="globalFont">3</th>
+                              <td class="globalFont">New Deaths:</td>
+                              <td class="globalFont"><%= ind5 %> </td>
+                         </tr>
+        
+                         <tr>
+                            <th scope="row" class="globalFont">4</th>
+                            <td class="globalFont">Total Deaths:</td>
+                            <td class="globalFont"><%= ind4 %> </td>
+                       </tr>
+        
+                         <tr>
+                              <th scope="row" class="globalFont">5</th>
+                              <td class="globalFont">New Recovered Cases:</td>
+                              <td class="globalFont"><%= ind6 %> </td>
+                         </tr>
+        
+                         <tr>
+                              <th scope="row" class="globalFont">6</th>
+                              <td class="globalFont">Total Recovered Cases:</td>
+                              <td class="globalFont"><%= ind8 %> </td>
+                         </tr>
+        
+                         <tr>
+                            <th scope="row" class="globalFont">7</th>
+                            <td class="globalFont">Total Active Cases:</td>
+                            <td class="globalFont"><%= ind1 %> </td>
+                       </tr>
+        
+                         <tr>
+                            <th scope="row" class="globalFont">8</th>
+                            <td class="globalFont">Last Updated <em>Time:</em> </td>
+                            <td class="globalFont"><%= ind7 %> </td>
+                       </tr>
+        
+                         
+                    </tbody>
+        
+                   </table>
+                   <small>*<em>Time</em> is in 24 hours format</small>
+<br><br>
+                   <ul class="indUpdates">
+                       HELP DESK
+                       <li><i class="fas fa-phone-square-alt"></i> +91-11-23978046</li>
+                       <li><i class="fas fa-phone-alt"></i> 1075(Toll Free)</li>
+                       <li><i class="far fa-envelope"></i> ncov2019@gov.in</li>
+                   </ul>
+                </div>
+        
+                <div class="col-lg-8 col-md-8 col-10 mx-auto" id="casesworldtable">
+                    <h2 class="text-center text-uppercase" style="margin-top: 80px;">LIVE Updates for <%= state %> </h2>
+                    
+                    <table class="table table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="casesFont">Sl No.</th>
+                            <th scope="col" class="casesFont">Attributes</th>
+                            <th scope="col" class="casesFont">Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         
+                           
+                    
+                           <tr>
+                            <th scope="row" class="casesFont">1</th>
+                            <td class="casesFont"> Total Active Cases: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= active %>   
+                            </strong>
+                            </td>
+                           </tr>
+                    
+                           <tr>
+                            <th scope="row" class="casesFont">2</th>
+                            <td class="casesFont"> Total Confirmed Cases: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= confirmed  %>  
+                            </strong>
+                            </td>
+                           </tr>
+                    
+                           <tr>
+                            <th scope="row" class="casesFont">3</th>
+                            <td class="casesFont">Total Deaths: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= deaths %>   
+                            </strong>
+                            </td>
+                           </tr>
+                    
+                           <tr>
+                            <th scope="row" class="casesFont">4</th>
+                            <td class="casesFont"> Total Recovered Cases: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= recovered %>
+                            </strong>
+                            </td>
+                           </tr>
+                    
+                           <tr>
+                            <th scope="row" class="casesFont">5</th>
+                            <td class="casesFont">Total Cases Migrated to Other States: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= migrated %> 
+                            </strong>
+                            </td>
+                           </tr>
+                    
+                           <tr>
+                            <th scope="row" class="casesFont">6</th>
+                            <td class="casesFont"> Total <em>delta</em> Confirmed Cases: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= deltaconfirmed  %>  
+                            </strong>
+                            </td>
+                           </tr>
+                    
+                           <tr>
+                            <th scope="row" class="casesFont">7</th>
+                            <td class="casesFont">Total <em>delta</em> Death: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= deltadeaths %>  
+                            </strong>
+                            </td>
+                           </tr>
+                           
+                           <tr>
+                            <th scope="row" class="casesFont">8</th>
+                            <td class="casesFont">Total <em>delta</em> Recovered Cases: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= deltarecovered %>  
+                            </strong>
+                            </td>
+                           </tr>
+        
+                           <tr>
+                            <th scope="row" class="casesFont">9</th>
+                            <td class="casesFont">Last Updated <em>time</em>: </td>
+                            <td class="casesFont">
+                            <strong>
+                                <%= date %> 
+                            </strong>
+                            </td>
+                           </tr>
+                    
+                        </tbody>
+                        <thead><tr></tr></thead>
+                        
+                      </table>
+                      <small>*<em>delta</em> refers to the live status of present day till the updated time </small>
+                      
+                      <p><small>**<em>time</em> is in 24 hours format</small></p>
+                </div>
+            </div>
+        
+        
+        </div>
+
+
+
+    </body>
+  
+    
+</div>
+
+
+<%- include('../partials/footer') %> 

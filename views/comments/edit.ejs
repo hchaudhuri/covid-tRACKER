@@ -1,0 +1,38 @@
+<%- include('../partials/header') %> 
+
+<div class="wrapper">
+    <body id="editCommentGradient">
+        <div class="container">
+            <div class="row" id="editCommentRow">
+                <div class="col-lg-8 col-md-7 col-10 mx-auto my-auto" id="editBack">
+                    <h1 class="text-center text-uppercase mt-5" id="editCommentHeading" >Edit your comment</h1>
+                    <div class="row">
+                        <div class="col-lg-7 col-md-6 col-9 mx-auto" id="editCommentform">
+                            <form action="/blogs/<%= blog_id %>/comments/<%= comment._id %>?_method=PUT " method="POST" >            
+                                <div class="form-group">
+                                    <label class="labelNEW" for="blogDescription">Your Comment</label>
+                                    <input type="text" required name="comment[text]" value="<%= comment.text %> " class="form-control" ></input> 
+                                    <small  class="form-text text-muted">Don't be <strong> <em>ABUSIVE</em></strong> !!</small>
+                                </div>
+                                <hr>
+                                <input type="checkbox" name="checkbox" id="checkbox" required> I have read and accept the <a href="/about">terms and conditions</a> of the site.
+                                <button type="submit" class="btn btn-secondary btn-lg btn-block mt-2 mb-4">SUBMIT</button>
+                   
+                              </form>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <br>
+        </div>
+        
+    </body>
+    
+
+    
+    
+</div>
+
+
+<%- include('../partials/footer') %> 

@@ -1,0 +1,77 @@
+<%- include('../partials/header') %> 
+<div class="wrapper">
+    <body id="imagewrappereditBlog">
+        <div class="container">
+            <h1 class="text-center text-uppercase display-4 mt-3"><strong>Edit Your Blog</strong></h1>
+            <div class="row">
+                <div class="col-11 col-sm-11 border border-secondary rounded mx-auto" id="editblogform">
+                    <form action="/blogs/<%= blog._id %>?_method=PUT " method="POST">
+                        <div class="container"  >
+                         <div class="form-group" >
+                             <label class="labelNEW" for="blogName">Blog Title</label>
+                             <input type="text" required class="form-control" name="blog[name]" value="<%= blog.name %> ">
+                         </div>        
+                        
+                         <div class="form-group">
+                            <label class="labelNEW" for="bloglocation">Location</label>
+                            <input type="text" class="form-control" name="blog[location]" value="<%= blog.location %> ">
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="labelNEW" for="blogquote">Blog quote</label>
+                            <input type="text" class="form-control" name="blog[quote]" value="<%= blog.quote %> ">
+                        </div>
+                
+                        <div class="form-group">
+                            <label class="labelNEW" for="blogquoteauthor">Blog quote author</label>
+                            <input type="text" class="form-control" name="blog[quoteauthor]" value="<%= blog.quoteauthor %> ">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="labelNEW" for="blogimagecaption">Image Caption</label>
+                            <input type="text" class="form-control" name="blog[imageCap]" value="<%= blog.imageCap %> ">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="labelNEW" for="blogsubname1">Blog Header 1</label>
+                            <input type="text" class="form-control" name="blog[subname1]" value="<%= blog.subname1 %> ">
+                        </div>
+    
+                         <div class="form-group">
+                             <label class="labelNEW" for="blogDescription">Description</label>
+                             <input type="text" required class="form-control"  name="blog[description]" value="<%= blog.description %> ">
+                         </div>  
+                         
+                         <div class="form-group">
+                             <label class="labelNEW" for="blogsubname2">Blog Header 2</label>
+                             <input type="text" class="form-control" name="blog[subname2]" value="<%= blog.subname2 %> ">
+                         </div>
+                 
+                         <div class="form-group">
+                             <label class="labelNEW" for="blogsubdescription">Blog Description</label>
+                             <input type="text" class="form-control" name="blog[subdescription]" value="<%= blog.subdescription %> ">
+                         </div>
+                         <hr>
+                         <input type="checkbox" name="checkbox" id="checkbox"  required><strong> I have read and accept the</strong> <a href="#">terms and services</a><strong> of the site.</strong>
+                         <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">EDIT</button>
+                         <br>
+                         <br>
+                         <br>
+                         <a href="/blogs/<%= blog._id %>" class="btn btn-dark float-right mb-3">Back</a>
+                         
+                     </div>
+                        
+                     </form>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+    
+    
+</div>
+
+
+<%- include('../partials/footer') %> 

@@ -1,0 +1,83 @@
+<%- include('../partials/header') %> 
+
+<div class="wrapper">
+  <body id="allblogsBack">
+    <div class="container">
+  
+    <div class="container" id="j1">
+        <div class="jumbotron mt-4" id="jumbotron">
+          <div class="row">
+            <div class="col-lg-12 col-12 typewriter">
+              <h1 class="text-center" >covid tRACKER-A DIGITAL DIARY</h1>
+              <h5 class="text-center text-uppercase" id="textIntro"><strong>A simple <span id="webApp">web app</span> to tell your story.</strong></h5>
+              <hr class="my-4 style-five">
+              <h5 class="text-center text-capitalize" id="textIntro" ><strong>track live updates across all countries</strong></h5>
+            </div>
+          </div>
+          
+            
+            
+            
+           
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="row" >
+        <div class="col-lg-11 col-md-7 col-12 mx-auto" >
+          <div class="card text-center" id="crudCard">
+            <div class="card-header border-success" id="crud">
+              <strong><span class="crudSub">C</span>reate,<span class="crudSub">R</span>ead,<span class="crudSub">U</span>pdate,<span class="crudSub">D</span>elete</strong>
+            </div>
+            <div class="card-body" id="crudBody">
+              <p class="card-title text-uppercase text-center " id="newBlogFormText1"><strong>how did the pandemic effect your life?</strong> </p>
+              <p class="card-body text-center text-capitalize " id="newBlogFormText2"><strong>share your experience with everyone.  </strong>  </p>
+              <a href="/blogs/new" class="btn btn-outline-dark" ><i class="far fa-plus-square"></i> CREATE NEW BLOG</a>
+            </div>
+           
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+            <div class="row mt-4">
+                <% blogs.forEach(function(blog){ %>
+                
+                    <div class="col-md-6 mr-auto">
+                        <div  class="card mt-3 mb-5" id="borderCardAllBlogs">
+                           <img id="allblogs" class="card-img-top" src="./uploads/<%= blog.file %> ">
+                            <div class="card-body" id="cardBody">
+                              <h3 class="card-title text-uppercase" ><strong><%- blog.name %></strong></h3>
+                              <p id="blogAuthor" style="font-size: 18px;"><i class="fas fa-pen-nib"></i> <strong><%= blog.author.username %></strong> </p>
+                              <p class="card-text" id="cardText"><strong><%- blog.description.substring(0,150) %>....</strong></p>
+                              <a href="blogs/<%=blog._id%>" class="btn btn-outline-secondary btn-sm" id="readMoreBtn"><i class="fas fa-book-open"></i> Read More!</a>
+                              <hr>
+                             
+                                <small id="blogDate"><i class="far fa-calendar-alt"></i> <strong><%= blog.created.toDateString() %></strong></small>
+                             
+                             
+                            </div>
+                    </div>
+                </div>
+                
+                <% }) %> 
+                </div>
+              </div>
+    
+        
+<br><br><br><br><br>
+    <div class="container">
+      <a href="/blogs" class="btn btn-info float-right ">GO TOP</a>
+    </div>
+      
+   
+  </div>
+  </body>
+</div>
+
+
+
+<%- include('../partials/footer') %>     

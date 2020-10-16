@@ -1,0 +1,86 @@
+<%- include('../partials/header') %> 
+
+<div class="wrapper">
+   
+    <body class="searchBack">
+    
+        <div class="container mt-3">
+
+            <h2 class="text-center text-uppercase display-4" style="margin-top: 125px;"><strong>Search for an Indian State</strong></h2>
+
+            <div class="row">
+    
+                <div class="col-lg-5 col-md-6 col-sm-8 col-810 mx-auto justify-content-center" style="margin-top: 15px;">
+                   
+                    
+                    
+                    <form action="/casesind" method="GET">
+                    <div class="input-group">
+                        <select class="custom-select border border-dark" name="numberind" id="inputGroupSelect02" required>
+                            <option selected>Choose...</option>
+                            <!-- <option value="0">All States</option> -->
+                            <option value="1">Maharashtra</option>
+                            <option value="2">Andhra Pradesh</option>
+                            <option value="3">Karnataka</option>
+                            <option value="4">Tamil Nadu</option>
+                            <option value="5">Uttar Pradesh</option>
+                            <option value="6">Delhi</option>
+                            <option value="7">kerela</option>
+                            <option value="8">West Bengal</option>
+                            <option value="9">Odisha</option>
+                            <option value="10">Telangana</option>
+                            <option value="11">Bihar</option>
+                            <option value="12">Assam</option>
+                            <option value="13">Rajasthan</option>
+                            <option value="14">Gujarat</option>
+                            <option value="15">Madhya Pradesh</option>
+                            <option value="16">Chattisgarh</option>
+                            <option value="17">Haryana</option>
+                            <option value="18">Punjab</option>
+                            <option value="19">Jharkhand</option>
+                            <option value="20">Jammu and Kashmir</option>
+                            <option value="21">Uttarkhand</option>
+                            <option value="22">Goa</option>
+                            <option value="23">Puducherry</option>
+                            <option value="24">Tripura</option>
+                            <option value="25">Himachal Pradesh</option>
+                            <option value="26">Manipur</option>
+                            <option value="27">Chandigarh</option>
+                            <option value="28">Arunachal Pradesh</option>
+                            <option value="29">Meghalaya</option>
+                            <option value="30">Nagaland</option>
+                            <option value="31">Ladakh</option>
+                            <option value="32">Andaman and Nicobar Islands</option>
+                            <option value="33">Sikkim</option>
+                            <option value="34">Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option value="35">Mizoram</option>
+                            <option value="37">Lakshadweep</option>
+                            
+                            </select>
+                            <div class="input-group-append">
+                                <label class="input-group-text text-uppercase" for="inputGroupSelect02">
+                                 <strong>state</strong>
+                               </label>
+                             </div>
+                             </div>
+                             <small class="text-capitalize"><strong>Select a state to get live updates.</strong></small>
+                             <hr>
+                     <input type="checkbox" name="checkbox" id="checkbox"  required><strong> I have read and accept the</strong> <a href="about" class="blogtc" style="color:white;">terms and conditions</a><strong> of the site.</strong>
+                             <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">SEARCH STATE</button>
+                    </form>
+    
+                </div>
+    
+            </div>
+    
+            
+            
+            </div>
+
+    </body>
+    
+</div>
+
+
+
+<%- include('../partials/footer') %> 

@@ -1,0 +1,654 @@
+/* --------------------------GENERAL START--------------------------- */
+.labelNEW {
+	margin-top: 15px;
+	font-size: 20px;
+	text-transform: uppercase; /* background-color: white; */
+	text-shadow: 5px 5px 10px rgba(211, 95, 95, 0.842);
+}
+.small {
+	font-weight: bolder;
+	color: black;
+}
+.asterisk {
+	color: red;
+}
+.glow {
+	display: inline-flex;
+	background-color: black;
+	font-size: 12px;
+	font-weight: 600;
+	color: rgb(28, 206, 28);
+	border: 1px solid rgb(28, 206, 28);
+	border-radius: 25px;
+	padding: 2px 2px;
+}
+.glow:hover {
+	font-weight: bolder;
+	font-size: 18px;
+}
+hr.style-five {
+	border: 0;
+	height: 0; /* Firefox... */
+	box-shadow: 0 0 0px 1px black;
+}
+hr.style-five:after {
+	/* Not really supposed to work, but does */
+	content: "\00a0";
+	/* Prevent margin collapse */
+}
+body {
+	font-family: 'Nunito', sans-serif;
+}
+.blogText {
+	/* color: white; */
+	color: black;
+	font-size: 25px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+/* --------------------------GENERAL END--------------------------- */
+
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+
+/* ------------------------Navbar START----------------------- */
+.nav-item:hover {
+	background-color: orange;
+	font-weight: bolder;
+}
+.navbar-brand:hover {
+	font-weight: 900;
+}
+.navbar ul {
+	padding: 0;
+}
+.navbar a {
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px;
+}
+#navbar-brand {
+	font-size: 25px;
+}
+.nav li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 3px 10px 3px 0;
+}
+.nav a {
+	color: #3f3940;
+	font-size: 18px;
+	font-weight: 700;
+	background: #d3dce0;
+	text-decoration: none;
+	padding: 10px;
+	display: block;
+}
+/* .nav a:hover {
+	color: rgb(31, 49, 211);
+	font-weight: bolder;
+} */
+.dropdown-item {
+	color: black;
+	font-weight: 700;
+}
+.dropdown-item:hover {
+	background-color: #918d83;
+}
+/* ------------------------Navbar END----------------------- */
+
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+
+/*---------------------footer START---------------------- */
+.wrapper {
+	min-height: 100%;
+}
+html,
+body {
+	height: 100%;
+}
+footer {
+	/* text-align: center; */
+	padding: 3px;
+	background-color: #303036;
+	color: white;
+	width: 100%;
+}
+#footerSectionLinks {
+	list-style: none;
+}
+.quickLinks {
+	margin-top: 5px;
+	font-size: 22px;
+}
+/* -----------------------------FOOETR END--------------------------- */
+
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+
+/* --------------ALL BLOGS START-------------------- */
+#allblogsBack {
+	background-image: url(https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+	background-repeat: repeat;
+	background-size: cover;
+}
+#jumbotron {
+	background: #833ab4; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#fcb045,
+		#fd1d1d,
+		#833ab4
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-weight: bold;
+	border: 3px solid black;
+}
+/* experiment */
+.typewriter h1 {
+	font-size: 3.3rem;
+	font-weight: bold;
+}
+.typewriter h5 {
+	font-size: 1.0rem;
+	color: black;
+}
+.typewriter h1,
+h4,
+h5 {
+	color: white;
+	font-family: monospace;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap;
+	/* Keeps the content on a single line */
+	margin: 0 auto;
+	/* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em;
+	/* Adjust as needed */
+	animation: typing 4s steps(30, end), blink-caret .5s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: transparent;
+	}
+}
+#crudCard {
+	border: 3px solid black;
+	border-radius: 45px;
+	background: #f0f2f0; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #000c40, #f0f2f0);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#000c40,
+		#f0f2f0
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#crud {
+	color: brown;
+	font-size: 20px;
+	text-transform: uppercase;
+	background-color: rgba(192, 186, 186, 0.966);
+	border-radius: 42px 44px 0 0;
+}
+#crud:hover {
+	font-size: 25px;
+}
+.crudSub {
+	font-size: 30px;
+	font-weight: bold;
+}
+.crudSub {
+	font-size: 35px;
+}
+#crudBody {
+	background: #f0f2f0; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #000c40, #f0f2f0);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#000c40,
+		#f0f2f0
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border-radius: 0 0 50px 50px;
+}
+#newBlogFormText1 {
+	font-size: 20px;
+	color: white;
+}
+#newBlogFormText2 {
+	color: black;
+}
+#newBlogBtn {
+	font-size: 25px;
+}
+/* experiment */
+#borderCardAllBlogs {
+	border: 5px solid white;
+	border-radius: 20px 100px 20px 20px;
+}
+#blogAuthor:hover {
+	font-weight: bold;
+	font-size: 25px;
+}
+#cardText {
+	font-weight: 900;
+}
+#cardText:hover {
+	font-size: 28px;
+}
+#readMoreBtn {
+	font-size: 15px;
+	font-weight: 500;
+	border: 2px solid black;
+}
+#readMoreBtn:hover {
+	font-size: 20px;
+	font-weight: bold;
+}
+#cardBody {
+	background-image: url(https://images.pexels.com/photos/122458/pexels-photo-122458.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 0 0 20px 20px;
+}
+#blogDate:hover {
+	font-size: 25px;
+}
+#allblogs {
+	border-radius: 20px 100px 0 0;
+	height: 300px;
+}
+/* -------------ALL BLOGS END---------------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+/* ---------------------------NEW BLOG FORM START--------------------- */
+#imagewrappernewblog {
+	background: #c9d6ff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#e2e2e2,
+		#c9d6ff
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#newblogform {
+	/* background-color: rgba(231, 229, 221, 0.966); */
+	background-image: url(https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-weight: bold;
+}
+.tipslist {
+	font-size: 17px;
+	color: black;
+	font-weight: 600;
+	text-align: justify;
+	justify-content: center;
+	list-style: square;
+}
+.tipsnewblog {
+	background-color: rgba(223, 245, 98, 0.973);
+	width: 80%;
+}
+.tipsheading ol li {
+	text-decoration: underline;
+}
+.tipspara {
+	font-weight: normal;
+}
+.blogtc {
+	color: white;
+}
+/* -----------------------NEW BLOG FORM END--------------------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+/* ------------------------Blog Show Page START----------------------- */
+#blogShow {
+	background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+	background-repeat: repeat;
+	background-size: cover;
+}
+#showblogRow {
+	margin-top: 50px; /* background-color: gray; */
+	border-radius: 120px 0 120px 0;
+}
+#showBack {
+	/* background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); */
+	border: 8px solid black;
+	border-radius: 120px 0 120px 0px;
+}
+#showblog {
+	background-image: url(https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-weight: bold;
+	color: white;
+	border-radius: 112px 0 0 0;
+}
+#imageShow1 {
+	background-image: url(https://images.unsplash.com/photo-1577200080776-fe8b6c5559dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#imageShow2 {
+	width: 330px;
+	height: 330px;
+}
+#imageCaption {
+	font-weight: 600;
+	background-color: white;
+}
+.description {
+	background-color: white;
+	/* background-image: url(https://images.pexels.com/photos/372748/pexels-photo-372748.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover; */
+	border-radius: 0 0 112px 0;
+	color: black;
+	font-weight: 700;
+	text-align: justify;
+}
+.description p {
+	font-size: 25px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+.deleteform {
+	display: inline;
+}
+#quoteShow {
+	text-align: center;
+}
+#quoteauthorShow {
+	text-align: center;
+}
+#locationShow {
+	margin-left: 80%;
+}
+#blogauthorShow {
+	display: inline;
+}
+.headingShow {
+	color: black;
+	display: inline-flex; /* background-color: black; */
+	text-transform: capitalize;
+	text-decoration: underline;
+	font-size: 40px;
+}
+/* =====BLOG COMMENTS START===== */
+#well {
+	background-color: #ddd9ddf3;
+}
+hr.style18 {
+	height: 30px;
+	border-style: solid;
+	border-color: #8c8b8b;
+	border-width: 1px 0 0 0;
+	border-radius: 20px;
+}
+hr.style18:before {
+	display: block;
+	content: "";
+	height: 30px;
+	margin-top: -31px;
+	border-style: solid;
+	border-color: #8c8b8b;
+	border-width: 0 0 1px 0;
+	border-radius: 20px;
+}
+/* =====BLOG COMMENTS END===== */
+/* ------------------------Blog Show Page END----------------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+/* --------------------new comment form START------------------------- */
+#commentNewGradient {
+	background: #eacda3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #d6ae7b, #eacda3);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#newCommentForm {
+	background-color: rgba(231, 229, 221, 0.966);
+	font-weight: bold;
+	border: 5px solid rgba(175, 96, 59, 0.932);
+	border-radius: 5% / 20%;
+}
+#newCommentHeading {
+	margin: 0 auto;
+	font-size: 31px;
+	color: white;
+}
+#newCommentrow {
+	margin-top: 50px;
+}
+#commentBack {
+	background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+	border: 8px solid black;
+	border-radius: 10px 100px / 120px;
+}
+/* --------------------new comment form END------------------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+/* -------------------edit Comment START------------------- */
+#editCommentGradient {
+	background: #eacda3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#d6ae7b,
+		#eacda3
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#editCommentRow {
+	margin-top: 150px;
+}
+#editBack {
+	background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+	border: 8px solid black;
+	border-radius: 10px 100px / 120px;
+}
+#editCommentHeading {
+	margin: 0 auto;
+	font-size: 31px;
+	color: white;
+}
+#editCommentform {
+	background-color: rgba(231, 229, 221, 0.966);
+	font-weight: bold;
+	border: 5px solid rgba(175, 96, 59, 0.932);
+	border-radius: 5% / 20%;
+}
+/* ---------------------------------------------------- */
+#imagewrappereditBlog {
+	background: #c9d6ff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#e2e2e2,
+		#c9d6ff
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#editblogform {
+	background-image: url(https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-weight: bold;
+}
+/* -------------------edit Comment END------------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+/*------------------ profile page START------------------------- */
+.profileBack {
+	background: #f12711; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #f5af19, #f12711); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to left,
+		#f5af19,
+		#f12711
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#profileRow {
+	background-image: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpeg);
+	background-size: cover;
+	border: 3px solid black;
+	border-radius: 15px;
+}
+#cardProfile {
+	border: 4px solid rgba(180, 99, 45, 0.705);
+	border-radius: 25px;
+}
+/*------------------ profile page START------------------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+/* ---------------------about page START--------------------------- */
+.aboutBack {
+	background: #0f0c29; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#24243e,
+		#302b63,
+		#0f0c29
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.about {
+	background-color: burlywood;
+	border: 5px solid white;
+	border-radius: 20px;
+}
+/* ---------------------about page END--------------------------- */
+/* ------------------------signin Button START--------------------- */
+.signINBackground {
+	background: #ece9e6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#ffffff,
+		#ece9e6
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#signIN {
+	/* padding-right: 10px; */
+	/* page-break-after: auto; */
+	font-family: 'Nunito', sans-serif;
+	font-size: 65px;
+	text-transform: uppercase;
+	text-decoration: underline;
+	margin-top: 80px; /* text-shadow: 5px 5px 10px red; */
+}
+.signinButton {
+	display: flex;
+	justify-content: center;
+}
+#signinBackground {
+	/* border: 3px solid red; */ /* margin-top: 100px;
+	margin-bottom: 100px; */
+}
+#signinBackground::after {
+	content: "";
+	background: url(https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+	background-repeat: repeat;
+	background-position: center;
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+	border: 2px solid red;
+	border-radius: 5px;
+}
+.instructions {
+	/* border: 3px solid red; */
+	margin-top: 50px;
+}
+.instructions p {
+	font-size: 24px;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+}
+.smallsignin {
+	/* border: 3px solid red; */
+	display: flex;
+	justify-content: center;
+}
+.googleLogo {
+	margin-top: 10px;
+	width: 70px;
+	height: 70px;
+}
+/* ------------------------signin Button START--------------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+/* ------------search pages START---------------- */
+.searchBack {
+	background: #403b4a;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #e7e9bb, #403b4a); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#e7e9bb,
+		#403b4a
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* ------------search pages START---------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */
+/*---------- cases pages START-------------------- */
+.casesBack {
+	background: #36d1dc; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #5b86e5, #36d1dc); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to left,
+		#5b86e5,
+		#36d1dc
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.globalFont {
+	font-size: 20px;
+	font-weight: 700;
+}
+#casesworld {
+	border: 3px solid black;
+	border-left: 0;
+	border-right: 0;
+}
+.casesFont {
+	font-size: 20px;
+	font-weight: bold;
+}
+.insCases {
+	list-style: square;
+	font-weight: bolder;
+	color: black; /* background-color: rgb(226, 190, 122); */
+	border: 5px solid black;
+	border-radius: 60px 20px 70px 20px;
+}
+.indUpdates {
+	list-style: none;
+	font-weight: 700;
+	font-size: 18px;
+}
+/* --------------cases pages END----------------- */
+/* ========================================================================================================================= */
+/* ========================================================================================================================= */

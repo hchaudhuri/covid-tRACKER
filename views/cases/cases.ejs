@@ -1,0 +1,188 @@
+<%- include('../partials/header') %> 
+
+<div class="wrapper">
+
+     <body class="casesBack">
+          
+          <div class="container">
+               <h1 class="text-center text-uppercase display-3 "><strong>live global updates</strong></h1>
+        </div>
+        
+        <div class="container">
+              <div class="row">
+                   <div class="col-lg-4 col-md-4 col-10 mx-auto" id="casesworld">
+                        <p class="text-center mt-3" style="font-size: 30px;">GLOBAL UPDATES</p>
+                        <table class="table table-sm table-active" >
+                             <thead>
+                             <tr>
+                                  <th scope="col" class="globalFont">Sl No.</th>
+                                  <th scope="col" class="globalFont">Attributes</th>
+                                  <th scope="col" class="globalFont">Value</th>
+                             </tr>
+                         </thead>
+          
+                         <tbody>
+                              <tr>
+                                   <th scope="row" class="globalFont">1</th>
+                                   <td class="globalFont">New Confirmed Cases:</td>
+                                   <td class="globalFont"><%= NewConfirmed %> </td>
+                              </tr>
+          
+                              <tr>
+                                   <th scope="row" class="globalFont">2</th>
+                                   <td class="globalFont">Total Confirmed Cases:</td>
+                                   <td class="globalFont"><%= TotalConfirmed %> </td>
+                              </tr>
+          
+                              <tr>
+                                   <th scope="row" class="globalFont">3</th>
+                                   <td class="globalFont">New Deaths:</td>
+                                   <td class="globalFont"><%= NewDeaths %> </td>
+                              </tr>
+          
+                              <tr>
+                                   <th scope="row" class="globalFont">4</th>
+                                   <td class="globalFont">Total Deaths:</td>
+                                   <td class="globalFont"><%= TotalDeaths %> </td>
+                              </tr>
+          
+                              <tr>
+                                   <th scope="row" class="globalFont">5</th>
+                                   <td class="globalFont">New Recovered Cases:</td>
+                                   <td class="globalFont"><%= NewRecovered %> </td>
+                              </tr>
+          
+                              <tr>
+                                   <th scope="row" class="globalFont">6</th>
+                                   <td class="globalFont">Total Recovered Cases:</td>
+                                   <td class="globalFont"><%= TotalRecovered %> </td>
+                              </tr>
+          
+                              
+                         </tbody>
+          
+                        </table>
+                        <small>*<em>Updated Daily</em></small>
+
+                        <br><br>
+     
+                        <ul class="insCases">
+                             <li>Maintain at least a 1-metre distance between yourself and others.</li>
+                             <li>Make wearing a mask a normal part of being around other people.</li>
+                             <li>Avoid the 3Cs: spaces that are closed, crowded or involve close contact.</li>
+                        </ul>
+                   </div>
+          
+                   <div class="col-lg-8 col-md-8 col-10 mx-auto" id="casesworldtable">
+                        <h2 class="text-center text-uppercase" style="margin-top: 70px;">covid-19 updates for <%= country %></h2>
+                        
+                    <table class="table table-striped mt-3">
+                         <thead>
+                             <tr>
+                                 <th scope="col" class="casesFont">Sl No.</th>
+                                 <th scope="col" class="casesFont">Attributes</th>
+                                 <th scope="col" class="casesFont">Value</th>
+                             </tr> 
+                         </thead>
+                 
+                         <tbody>
+                           
+                                <tr>
+                                 <th scope="row" class="casesFont">1</th>
+                                 <td class="casesFont"> New Confirmed Cases:  </td>
+                                 <td class="casesFont">
+                                 <strong>
+                                      <%= newCo %> 
+                                 </strong>
+                                 </td>
+                                </tr>
+                 
+                                <tr>
+                                 <th scope="row" class="casesFont">2</th>
+                                 <td class="casesFont"> Total Confirmed Cases: </td>
+                                 <td class="casesFont">
+                                 <strong>
+                                      <%= totalCo %> 
+                                 </strong>
+                                 </td>
+                                </tr>
+                 
+                                <tr>
+                                 <th scope="row" class="casesFont">3</th>
+                                 <td class="casesFont"> New Deaths: </td>
+                                 <td class="casesFont">
+                                 <strong>
+                                      <%= newDe %> 
+                                 </strong>
+                                 </td>
+                                </tr>
+                 
+                                <tr>
+                                 <th scope="row" class="casesFont">4</th>
+                                 <td class="casesFont"> Total Deaths: </td>
+                                 <td class="casesFont">
+                                 <strong>
+                                      <%= totalDe %> 
+                                 </strong>
+                                 </td>
+                                </tr>
+                 
+                                <tr>
+                                 <th scope="row" class="casesFont">5</th>
+                                 <td class="casesFont"> New Recovered: </td>
+                                 <td class="casesFont">
+                                 <strong>
+                                      <%= newRe %> 
+                                 </strong>
+                                 </td>
+                                </tr>
+                 
+                                <tr>
+                                 <th scope="row" class="casesFont">6</th>
+                                 <td class="casesFont"> Total Recovered: </td>
+                                 <td class="casesFont">
+                                 <strong>
+                                      <%= totalRe %> 
+                                 </strong>
+                                 </td>
+                                </tr>
+          
+                                <tr>
+                                   <th scope="row" class="casesFont">7</th>
+                                   <td class="casesFont"> Last Updated <em>time</em>: </td>
+                                   <td class="casesFont">
+                                   <strong>
+                                        <%= date %> 
+                                   </strong>
+                                   </td>
+                                  </tr>
+                 
+                                
+                 
+                                
+                         </tbody>
+                     </table>
+                     <br>
+                     <small>*<em>time</em> is in <a href="https://www.utctime.net/z-time-now" style="color: white;">ZULU</a> time format</small>
+                     <p> <small> Don't know about the <em>ZULU</em> time format??
+                     Click <a href="http://time-time.net/times/time-zones/world-time-zones.php">here!</a></small>
+                     </p>
+                   </div>
+              </div>
+              
+              
+          </div>
+     
+     </body>
+
+     
+     
+</div>
+
+
+
+
+
+
+
+<%- include('../partials/footer') %> 

@@ -1,0 +1,185 @@
+<%- include('../partials/header') %> 
+
+<div class="wrapper">
+    
+ <body id="blogShow">
+    <div class="container">
+        <div class="row" id="showblogRow"  style="border: 5px solid black; border-radius: 120px 0 120px 0;">
+  
+          
+                    <div class="col-lg-8 col-md-12  col-12 mx-auto" id="showblog">
+                  
+                          <h1 class="mt-5 text-uppercase"><strong> <%- blog.name %></strong></h1> 
+                          <h5 id="blogauthorShow" class="ml-5"><i class="fas fa-pen-nib"></i> <a href="/users/<%= blog.author.id %> "><%= blog.author.username %></a> </h5> <p class="glow" ><i class="fas fa-user-check"></i> verified</p>
+                          <h6 class="ml-5"><i class="far fa-calendar-alt"></i>  <%= blog.created.toDateString() %></h6>
+                          <br>
+                          <h6 id="locationShow"><i class="fas fa-map-marker-alt"></i> <%- blog.location %> </h6>
+                    
+                       
+                        <br>
+                      
+                     
+                        
+                            <p id="quoteShow" class="mb-0"><i class="fas fa-quote-left"></i> <%- blog.quote %> <i class="fas fa-quote-right"></i></p>
+                           <p id="quoteauthorShow"><i class="fas fa-angle-double-right"></i> <em> <%- blog.quoteauthor %></em></p>
+                          
+                       
+                    </div>
+
+                    
+                      <div class="col-lg-4 col-md-12  col-12 mx-auto" id="imageShow1">
+                        <div class="container">
+                        <img id="imageShow2"  class="img-thumbnail rounded mx-auto mt-3 d-block" src="../uploads/<%= blog.file %> " >
+                        <p id="imageCaption" class="text-center border border-dark mt-2"><%- blog.imageCap %> </p>
+                    </div>
+                    </div>
+            
+                  
+                    
+                   
+                  
+                    <div class="col-lg-12 col-md-12  col-12 mx-auto description">
+                 
+                        
+                            <h3 class="headingShow mt-2 text-uppercase"><%- blog.subname1 %> </h3>
+                            <p class=" text-justify blogText"><%- blog.description %> </p>
+                            <h3 class="headingShow text-uppercase"><%- blog.subname2  %> </h3>
+                            <p class=" text-justify blogText"><%- blog.subdescription %> </p><br><br>
+                            <% if((user && blog.author.id.equals(user._id) )){ %>
+                                <a href="/blogs/<%= blog._id %>/edit " class="btn btn-secondary mb-3"><i class="far fa-edit"></i> EDIT</a>
+                                
+                                  
+                                 
+
+                                  <button type="button" class="btn btn-danger mb-3" data-toggle="modal" data-target="#staticBackdrop">
+                                    <i class="far fa-trash-alt"></i>  DELETE
+                                  </button>
+
+                                  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h3 class="modal-title" id="exampleModalLabel">DELETE BLOG</h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body text-uppercase">
+                                          are you sure you want to delete your blog?
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <form class="deleteform" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                                          <button class="btn btn-danger" data-dismiss="hide"><i class="far fa-trash-alt"></i> DELETE</button>
+                                        </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              
+                              
+                                <% } %> 
+                       
+                        
+                        
+                    </div>
+              
+              
+          
+              
+              
+               
+              
+            
+            
+        </div>
+       
+         
+        
+        
+       
+ 
+
+   
+      
+  
+      <div class="card mt-4 border border-dark" id="well">
+         <div class="container">
+              <div>
+                  <a href="/blogs/<%=blog._id%>/comments/new" class="float-right btn btn-outline-success mt-4 mr-3 text-uppercase" id="newCommentButton"><i class="far fa-plus-square"></i> <strong>Add a New Comment</strong></a>
+                 <br>
+              </div>
+              <br>
+              
+              <br>
+              <hr class="style18">
+            </div>
+              <% blog.comments.forEach(function(comment){ %>
+                <div class="container">
+
+                
+                  <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                          <div class="card">
+                              <div class="card-body">
+                                  <h6 class="card-title"><strong> <i class="fas fa-user"></i> <%= comment.author.username %></strong></h6>
+                                  <span class="float-right"><small ><%= comment.created.toDateString() %></small></span>
+                                  <p class="card-text"><i class="far fa-comments"></i> <%= comment.text %> </p>
+                                  <p></p>
+                          <% if (user && comment.author.id.equals(user._id)) { %>
+                              <a href="/blogs/<%= blog.id %>/comments/<%= comment._id %>/edit  " class="btn btn-outline-secondary btn-sm "><i class="far fa-edit"></i> EDIT</a>
+                              
+                            
+                              <button type="button" class="btn btn-outline-danger float-right btn-sm" data-toggle="modal" data-target="#exampleModal">
+                                <i class="far fa-trash-alt"></i>  DELETE
+                              </button>
+
+                              
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h3 class="modal-title" id="exampleModalLabel">DELETE COMMENT</h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body text-uppercase">
+                                          are you sure you want to delete your comment?
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <form class="deleteform" action="/blogs/<%= blog.id %>/comments/<%= comment.id %>?_method=DELETE" method="POST">
+                                            <button class="btn btn-sm btn-outline-danger float-right"><i class="far fa-trash-alt"></i> DELETE</button>
+                                            </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                          <% } %> 
+                          
+                              </div>
+                          </div>
+                          
+                          
+                          
+                      </div>
+                
+                  </div>
+                </div>
+                <br>
+                  
+            <% }) %>
+  
+      </div>
+  
+  </div>
+
+</body>
+</div>
+
+    
+
+
+<%- include('../partials/footer') %> 

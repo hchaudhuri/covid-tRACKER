@@ -1,0 +1,48 @@
+<%- include('../partials/header') %> 
+
+<div class="wrapper">
+    
+<body id="commentNewGradient">
+    <div class="container">
+        <div class="row" id="newCommentrow">
+            <div class="col-lg-9 col-md-9 col-11 mx-auto my-auto" id="commentBack">
+                <h1 class="text-center text-uppercase mt-5 " id="newCommentHeading">Add a comment to <%= blog.name %></h1>
+                <div class="row">
+                    
+                    <div class="col-lg-8 col-md-8 col-10 mx-auto mt-3" id="newCommentForm">
+                        
+                        <form action="/blogs/<%= blog._id %>/comments" method="POST" >            
+                            <div class="form-group">
+                                <label class="labelNEW" for="blogDescription">Your Comment</label>
+                                <textarea type="text" name="comment[text]" placeholder="Enter your comment here" class="form-control" rows="10" ></textarea> 
+                                <small  class="form-text text-muted">Don't be <strong> <em>ABUSIVE</em></strong> !!</small>
+                            </div>
+                            <hr >
+                            <input type="checkbox" name="checkbox" id="checkbox" required><strong> I have read and accept the <a href="/about">terms and conditions</a> of the site.</strong>
+                            
+                            <button type="submit" class="btn btn-outline-dark btn-lg btn-block mt-2 mb-4">COMMENT</button>
+                            
+               
+                          </form>
+                          
+                    </div>
+                    
+                </div>
+                <br>
+                
+            </div>
+            
+        </div>
+            
+            <br>
+    </div>
+    
+    
+    
+</body>
+   
+    
+</div>
+
+
+<%- include('../partials/footer') %> 
